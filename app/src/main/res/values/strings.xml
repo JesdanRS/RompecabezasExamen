@@ -1,0 +1,132 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Puzzle Master</string>
+    
+    <!-- Pantalla principal -->
+    <string name="welcome_title">¡Bienvenido a Puzzle Master!</string>
+    <string name="welcome_subtitle">El rompecabezas deslizante más divertido</string>
+    <string name="enter_player_name">Ingresa tu nombre</string>
+    <string name="player_name_hint">Nombre del jugador</string>
+    <string name="start_game">Iniciar Juego</string>
+    <string name="view_ranking">Ver Ranking</string>
+    <string name="settings">Configuración</string>
+    
+    <!-- Selección de dificultad -->
+    <string name="select_difficulty">Selecciona la dificultad</string>
+    <string name="difficulty_2x2">Principiante (2x2)</string>
+    <string name="difficulty_3x3">Fácil (3x3)</string>
+    <string name="difficulty_4x4">Medio (4x4)</string>
+    <string name="difficulty_5x5">Difícil (5x5)</string>
+    <string name="continue_btn">Continuar</string>
+    
+    <!-- Selección de imagen -->
+    <string name="select_image">Selecciona una imagen</string>
+    <string name="take_photo">Tomar Foto</string>
+    <string name="select_from_gallery">Seleccionar de Galería</string>
+    <string name="use_default_image">Usar Imagen Predeterminada</string>
+    
+    <!-- Pantalla de juego -->
+    <string name="time_label">Tiempo:</string>
+    <string name="moves_label">Movimientos:</string>
+    <string name="score_label">Puntuación:</string>
+    <string name="pause_game">Pausar</string>
+    <string name="resume_game">Reanudar</string>
+    <string name="show_preview">Miniatura</string>
+    <string name="hide_preview">Ocultar</string>
+    <string name="shuffle_puzzle">Mezclar</string>
+    <string name="solve_puzzle">Resolver</string>
+    <string name="back_to_menu">Menú Principal</string>
+    
+    <!-- Estados del juego -->
+    <string name="game_paused">Juego pausado</string>
+    <string name="solving_puzzle">Resolviendo puzzle...</string>
+    <string name="puzzle_solved_auto">¡Puzzle resuelto automáticamente!</string>
+    
+    <!-- Modal de victoria -->
+    <string name="congratulations">¡Felicitaciones!</string>
+    <string name="puzzle_completed">¡Has completado el puzzle!</string>
+    <string name="final_time">Tiempo final: %s</string>
+    <string name="final_moves">Movimientos: %d</string>
+    <string name="final_score">Puntuación: %d puntos</string>
+    <string name="new_record">¡Nuevo récord!</string>
+    <string name="play_again">Jugar de Nuevo</string>
+    <string name="back_to_main">Volver al Menú</string>
+    
+    <!-- Ranking -->
+    <string name="ranking_title">Ranking de Jugadores</string>
+    <string name="filter_all">Todos</string>
+    <string name="filter_by_player">Por Jugador</string>
+    <string name="filter_by_time">Por Tiempo</string>
+    <string name="filter_by_moves">Por Movimientos</string>
+    <string name="filter_by_score">Por Puntuación</string>
+    <string name="rank_position">#%d</string>
+    <string name="difficulty_label">Dificultad: %s</string>
+    <string name="no_records">No hay registros aún</string>
+    <string name="clear_ranking">Limpiar Ranking</string>
+    
+    <!-- Formatos de tiempo -->
+    <string name="time_format_minutes">%d:%02d</string>
+    <string name="time_format_seconds">%ds</string>
+    <string name="time_format_ms">%d.%02ds</string>
+    
+    <!-- Mensajes de error -->
+    <string name="error_title">Error</string>
+    <string name="error_name_empty">Por favor ingresa tu nombre</string>
+    <string name="error_name_too_short">El nombre debe tener al menos 2 caracteres</string>
+    <string name="error_camera_permission">Se necesita permiso de cámara para tomar fotos</string>
+    <string name="error_storage_permission">Se necesita permiso de almacenamiento para acceder a la galería</string>
+    <string name="error_no_camera">No se encontró cámara en el dispositivo</string>
+    <string name="error_image_load">Error al cargar la imagen</string>
+    <string name="error_puzzle_unsolvable">El puzzle no tiene solución</string>
+    <string name="error_database">Error de base de datos</string>
+    
+    <!-- Mensajes de confirmación -->
+    <string name="confirm_title">Confirmar</string>
+    <string name="confirm_clear_ranking">¿Estás seguro de que quieres eliminar todos los registros del ranking?</string>
+    <string name="confirm_restart_game">¿Estás seguro de que quieres reiniciar el juego? Perderás el progreso actual.</string>
+    <string name="confirm_exit_game">¿Estás seguro de que quieres salir? El progreso se perderá.</string>
+    
+    <!-- Botones generales -->
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="close">Cerrar</string>
+    <string name="retry">Reintentar</string>
+    <string name="save">Guardar</string>
+    
+    <!-- Ayuda y tutoriales -->
+    <string name="help_title">¿Cómo jugar?</string>
+    <string name="help_content">• Toca una pieza adyacente al espacio vacío para moverla\n• Ordena todas las piezas para formar la imagen completa\n• Usa el botón \"Miniatura\" para ver la imagen objetivo\n• ¡Menos movimientos y tiempo = mayor puntuación!</string>
+    <string name="got_it">Entendido</string>
+    
+    <!-- Configuración -->
+    <string name="settings_title">Configuración</string>
+    <string name="enable_animations">Habilitar animaciones</string>
+    <string name="enable_sound">Habilitar sonidos</string>
+    <string name="show_numbers">Mostrar números en lugar de imagen</string>
+    <string name="auto_save">Guardar progreso automáticamente</string>
+    
+    <!-- Descripciones de accesibilidad -->
+    <string name="cd_puzzle_piece">Pieza del puzzle número %d</string>
+    <string name="cd_empty_space">Espacio vacío</string>
+    <string name="cd_preview_image">Vista previa de la imagen completa</string>
+    <string name="cd_player_avatar">Avatar del jugador</string>
+    
+    <!-- Notificaciones y toasts -->
+    <string name="toast_game_saved">Juego guardado</string>
+    <string name="toast_puzzle_shuffled">Puzzle mezclado</string>
+    <string name="toast_solving_started">Iniciando resolución automática...</string>
+    <string name="toast_move_invalid">Movimiento no válido</string>
+    <string name="toast_record_saved">Récord guardado</string>
+    
+    <!-- Opciones del menú -->
+    <string name="menu_help">Ayuda</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_exit">Salir</string>
+    
+    <!-- Acerca de -->
+    <string name="about_title">Acerca de Puzzle Master</string>
+    <string name="about_content">Puzzle Master v1.0\n\nUn rompecabezas deslizante moderno con múltiples niveles de dificultad.\n\nDesarrollado con ❤️ para Android</string>
+    <string name="about_version">Versión 1.0</string>
+</resources>

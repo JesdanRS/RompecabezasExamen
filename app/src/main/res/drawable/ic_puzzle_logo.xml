@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Pieza de puzzle principal -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M3,3h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/accent_blue"
+        android:pathData="M9,3h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/accent_green"
+        android:pathData="M15,3h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/primary_purple_light"
+        android:pathData="M3,9h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/accent_orange_light"
+        android:pathData="M9,9h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/primary_purple"
+        android:pathData="M15,9h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/accent_blue"
+        android:pathData="M3,15h6v6h-6z"/>
+    
+    <path
+        android:fillColor="@color/primary_purple_dark"
+        android:pathData="M9,15h6v6h-6z"/>
+    
+    <!-- Espacio vacío representado por borde -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@color/text_white"
+        android:strokeWidth="2"
+        android:pathData="M15,15h6v6h-6z"/>
+</vector>

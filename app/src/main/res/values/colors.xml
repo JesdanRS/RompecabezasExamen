@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales del tema (inspirados en la imagen) -->
+    <color name="primary_purple">#6C5CE7</color>
+    <color name="primary_purple_dark">#5A4FCF</color>
+    <color name="primary_purple_light">#A29BFE</color>
+    
+    <!-- Colores de acento -->
+    <color name="accent_orange">#FF7675</color>
+    <color name="accent_orange_light">#FDCB6E</color>
+    <color name="accent_blue">#74B9FF</color>
+    <color name="accent_green">#00B894</color>
+    
+    <!-- Gradientes -->
+    <color name="gradient_start">#6C5CE7</color>
+    <color name="gradient_middle">#A29BFE</color>
+    <color name="gradient_end">#74B9FF</color>
+    
+    <!-- Colores de fondo -->
+    <color name="background_primary">#F8F9FA</color>
+    <color name="background_secondary">#FFFFFF</color>
+    <color name="background_dark">#2D3436</color>
+    
+    <!-- Colores de superficie -->
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_medium">#F1F2F6</color>
+    <color name="surface_dark">#DDD6FE</color>
+    
+    <!-- Colores de texto -->
+    <color name="text_primary">#2D3436</color>
+    <color name="text_secondary">#636E72</color>
+    <color name="text_hint">#B2BEC3</color>
+    <color name="text_white">#FFFFFF</color>
+    
+    <!-- Colores del puzzle -->
+    <color name="puzzle_border">#FFFFFF</color>
+    <color name="puzzle_shadow">#1A000000</color>
+    <color name="puzzle_empty">#50FFFFFF</color>
+    
+    <!-- Estados de botones -->
+    <color name="button_primary">#6C5CE7</color>
+    <color name="button_primary_pressed">#5A4FCF</color>
+    <color name="button_secondary">#74B9FF</color>
+    <color name="button_secondary_pressed">#0984E3</color>
+    <color name="button_success">#00B894</color>
+    <color name="button_warning">#FDCB6E</color>
+    <color name="button_error">#FF7675</color>
+    
+    <!-- Colores del ranking -->
+    <color name="rank_gold">#F39C12</color>
+    <color name="rank_silver">#95A5A6</color>
+    <color name="rank_bronze">#E67E22</color>
+    
+    <!-- Colores de transparencia -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#50FFFFFF</color>
+    
+    <!-- Colores básicos -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".PuzzleActivity">
+
+    <!-- Barra superior con estadísticas -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/surface_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Tiempo -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_time_label"
+                    style="@style/GameStatsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/tv_time_value"
+                    style="@style/GameStatsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <!-- Movimientos -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_moves_label"
+                    style="@style/GameStatsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/moves_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/tv_moves_value"
+                    style="@style/GameStatsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+            <!-- Puntuación -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_score_label"
+                    style="@style/GameStatsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_label"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/tv_score_value"
+                    style="@style/GameStatsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/text_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Área del puzzle -->
+    <FrameLayout
+        android:id="@+id/fl_puzzle_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/card_stats"
+        app:layout_constraintBottom_toTopOf="@id/card_controls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <!-- Vista del puzzle (se agregará programáticamente) -->
+        <com.example.rompecabezasexamen.PuzzleView
+            android:id="@+id/puzzle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Overlay de pausa -->
+        <LinearLayout
+            android:id="@+id/ll_pause_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlay_dark"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_paused"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_resume_overlay"
+                style="@style/ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resume_game"
+                app:cornerRadius="25dp" />
+
+        </LinearLayout>
+
+        <!-- Vista previa (miniatura) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_preview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cd_preview_image" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <!-- Controles del juego -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/surface_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Primera fila de botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <!-- Botón pausar/reanudar -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_pause"
+                    style="@style/ButtonSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/pause_game"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_pause"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/button_warning" />
+
+                <!-- Botón miniatura -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_preview"
+                    style="@style/ButtonSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/show_preview"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_preview"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/button_secondary" />
+
+                <!-- Botón mezclar -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_shuffle"
+                    style="@style/ButtonSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/shuffle_puzzle"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_shuffle"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/accent_orange" />
+
+            </LinearLayout>
+
+            <!-- Segunda fila de botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Botón resolver -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_solve"
+                    style="@style/ButtonSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/solve_puzzle"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_lightbulb"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/button_success" />
+
+                <!-- Botón volver al menú -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back_to_menu"
+                    style="@style/ButtonSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/back_to_menu"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_home"
+                    app:iconSize="18dp"
+                    app:backgroundTint="@color/button_error" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Indicador de resolución automática -->
+    <LinearLayout
+        android:id="@+id/ll_solving_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/solving_indicator_background"
+        android:padding="16dp"
+        android:elevation="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/fl_puzzle_container"
+        app:layout_constraintBottom_toBottomOf="@id/fl_puzzle_container"
+        app:layout_constraintStart_toStartOf="@id/fl_puzzle_container"
+        app:layout_constraintEnd_toEndOf="@id/fl_puzzle_container">
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminateTint="@color/text_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solving_puzzle"
+            android:textColor="@color/text_white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
