@@ -9,7 +9,6 @@
     <string name="player_name_hint">Nombre del jugador</string>
     <string name="start_game">Iniciar Juego</string>
     <string name="view_ranking">Ver Ranking</string>
-    <string name="settings">Configuración</string>
     
     <!-- Selección de dificultad -->
     <string name="select_difficulty">Selecciona la dificultad</string>
@@ -100,12 +99,6 @@
     <string name="help_content">• Toca una pieza adyacente al espacio vacío para moverla\n• Ordena todas las piezas para formar la imagen completa\n• Usa el botón \"Miniatura\" para ver la imagen objetivo\n• ¡Menos movimientos y tiempo = mayor puntuación!</string>
     <string name="got_it">Entendido</string>
     
-    <!-- Configuración -->
-    <string name="settings_title">Configuración</string>
-    <string name="enable_animations">Habilitar animaciones</string>
-    <string name="enable_sound">Habilitar sonidos</string>
-    <string name="show_numbers">Mostrar números en lugar de imagen</string>
-    <string name="auto_save">Guardar progreso automáticamente</string>
     
     <!-- Descripciones de accesibilidad -->
     <string name="cd_puzzle_piece">Pieza del puzzle número %d</string>

@@ -165,27 +165,13 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_help"
                     style="@style/ButtonSmall"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
                     android:text="@string/menu_help"
                     app:cornerRadius="20dp"
                     app:icon="@drawable/ic_help"
                     app:iconSize="18dp" />
 
-                <!-- Botón configuración -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_settings"
-                    style="@style/ButtonSmall"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/settings"
-                    app:cornerRadius="20dp"
-                    app:icon="@drawable/ic_settings"
-                    app:iconSize="18dp" />
 
             </LinearLayout>
 

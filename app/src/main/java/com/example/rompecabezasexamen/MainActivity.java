@@ -30,7 +30,7 @@ import com.google.android.material.textfield.TextInputLayout;
  * - Registro y validación del nombre del jugador
  * - Navegación al juego y ranking
  * - Gestión de permisos para cámara y almacenamiento
- * - Diálogos de ayuda y configuración
+ * - Diálogos de ayuda
  * - Persistencia del nombre del jugador en SharedPreferences
  */
 public class MainActivity extends AppCompatActivity {
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton btnStartGame;
     private MaterialButton btnViewRanking;
     private MaterialButton btnHelp;
-    private MaterialButton btnSettings;
     
     // Base de datos
     private DatabaseHelper dbHelper;
@@ -96,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         btnStartGame = findViewById(R.id.btn_start_game);
         btnViewRanking = findViewById(R.id.btn_view_ranking);
         btnHelp = findViewById(R.id.btn_help);
-        btnSettings = findViewById(R.id.btn_settings);
         
         // Inicialmente deshabilitar el botón de iniciar juego
         btnStartGame.setEnabled(false);
@@ -136,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
         // Botón ayuda
         btnHelp.setOnClickListener(v -> showHelpDialog());
         
-        // Botón configuración
-        btnSettings.setOnClickListener(v -> showSettingsDialog());
     }
     
     /**
@@ -347,16 +343,6 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
     
-    /**
-     * Muestra el diálogo de configuración (placeholder)
-     */
-    private void showSettingsDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.settings_title);
-        builder.setMessage("Configuraciones disponibles en una futura actualización");
-        builder.setPositiveButton(R.string.ok, null);
-        builder.show();
-    }
     
     /**
      * Carga los datos guardados del jugador
